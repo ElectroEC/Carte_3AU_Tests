@@ -1,0 +1,23 @@
+Carte 3AU
+Carte d'expérimentation pour NodeMCU ESP32
+
+Liste des codes sources :
+
+01: Test LED RGB
+02: Test Buttons (BP401 & BP402)
+03: MCP23017 & 7 Segments Display
+04: Test OLED Display
+05: Test DHT11
+06: Test Potentiometer (GPIO33 = ADC1 Channel 5) and Relay (GPIO25)
+07: Test LDR (GPIO39 = ADC1 Channel 3)
+08: Test CAN Sender
+09a: Test CAN Receiver
+09b: Test CAN Receiver with Callback
+10a: Test Keyboard on MCP23017
+10b: Test Keyboard on MCP23017 + OLED Display
+11: Test Rotary encoder with switch
+12: Test MAX6675 Thermocouple Type K
+13: Test Click Board (Thermo Click)-> = MAX31855K Thermocouple Type K
+14: Test BME280 (I2C interface)
+15a: Test NRF24L01+ (Basic RX)
+15b: Test NRF24L01+ (Basic TX)
