@@ -1,2 +1,5 @@
 # Ignore the buil directory
 /ArduinoOutput
+
+# Ignore IDE specific files
+.vscode/
