@@ -2,5 +2,5 @@
     "configuration": "FlashFreq=80,UploadSpeed=921600,DebugLevel=none",
     "board": "esp32:esp32:esp32doit-devkit-v1",
     "port": "COM19",
-    "sketch": "Carte3AU_01\\Carte3AU_01.ino"
+    "sketch": "Carte3AU_02\\Carte3AU_02.ino"
 }

@@ -4,7 +4,7 @@ Carte d'expérimentation pour NodeMCU ESP32
 Liste des codes sources :
 
 01: Test LED RGB
-02: Test Buttons (BP401 & BP402)
+02: Test Buttons (BP401, BP402 & BT401)
 03: MCP23017 & 7 Segments Display
 04: Test OLED Display
 05: Test DHT11
