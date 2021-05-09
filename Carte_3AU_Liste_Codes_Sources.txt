@@ -21,3 +21,4 @@ Liste des codes sources :
 14: Test BME280 (I2C interface)
 15a: Test NRF24L01+ (Basic RX)
 15b: Test NRF24L01+ (Basic TX)
+16: Test Buzzer (Carte V2.0)
