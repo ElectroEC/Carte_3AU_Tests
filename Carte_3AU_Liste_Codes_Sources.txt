@@ -23,3 +23,4 @@ Liste des codes sources :
 15b: Test NRF24L01+ (Basic TX)
 16: Test Buzzer (Carte V2.0)
 17: Test Led WS2812B (Carte V2.0)
+18a: Test SD Card (Carte V2.0)
