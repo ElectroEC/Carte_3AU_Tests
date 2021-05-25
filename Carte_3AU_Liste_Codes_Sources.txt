@@ -25,3 +25,4 @@ Liste des codes sources :
 17: Test Led WS2812B (Carte V2.0)
 18a: Test SD Card (Carte V2.0)
 19a: Test MCP4725A1T-E (Carte V2.0)
+20: Test Serial EEPROM 24LC256 (Carte V2.0)
