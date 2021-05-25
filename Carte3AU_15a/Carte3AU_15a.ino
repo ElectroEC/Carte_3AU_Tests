@@ -29,7 +29,7 @@ GND   -> GND
 
 const static uint8_t RADIO_ID = 0;
 const static uint8_t PIN_RADIO_CE = 15;
-const static uint8_t PIN_RADIO_CSN = 12;
+const static uint8_t PIN_RADIO_CSN = 13; // Hardware: V1 = 12 | V2 = 13
 const static uint8_t PIN_RADIO_MOSI = 23;
 const static uint8_t PIN_RADIO_MISO = 19;
 const static uint8_t PIN_RADIO_SCK = 18;
@@ -38,9 +38,9 @@ const static uint8_t PIN_RADIO_SCK = 18;
 
 struct __attribute__((packed)) RadioPacket // Note the packed attribute.
 {
-    uint8_t FromRadioId;
-    uint32_t OnTimeMillis;
-    uint32_t FailedTxCount;
+  uint8_t FromRadioId;
+  uint32_t OnTimeMillis;
+  uint32_t FailedTxCount;
 };
 
 NRFLite _radio;
@@ -48,20 +48,21 @@ RadioPacket _radioData;
 
 void setup()
 {
-  pinMode(csMAX6675,OUTPUT);
-  digitalWrite(csMAX6675,HIGH); // Deactivate MAX6675
+  pinMode(csMAX6675, OUTPUT);
+  digitalWrite(csMAX6675, HIGH); // Deactivate MAX6675
   Serial.begin(115200);
-  
+
   // Configure SPI pins.
   SPI.begin(PIN_RADIO_SCK, PIN_RADIO_MISO, PIN_RADIO_MOSI, PIN_RADIO_CSN);
-  
+
   // Indicate to NRFLite that it should not call SPI.begin() during initialization since it has already been done.
   uint8_t callSpiBegin = 0;
-  
+
   if (!_radio.init(RADIO_ID, PIN_RADIO_CE, PIN_RADIO_CSN, NRFLite::BITRATE2MBPS, 100, callSpiBegin))
   {
     Serial.println("Cannot communicate with radio");
-    while (1); // Wait here forever.
+    while (1)
+      ; // Wait here forever.
   }
   else
   {
